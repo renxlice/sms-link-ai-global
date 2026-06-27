@@ -1,0 +1,525 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:upaf="clr-namespace:UiPath.Persistence.Activities.FormTask;assembly=UiPath.Persistence.Activities" xmlns:upat="clr-namespace:UiPath.Persistence.Activities.Tasks;assembly=UiPath.Persistence.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Persistence.Activities.Model.TaskTimer</x:String>
+      <x:String>UiPath.Persistence.Activities.Model.Task</x:String>
+      <x:String>UiPath.Persistence.Activities.Tasks</x:String>
+      <x:String>UiPath.Persistence.Activities.FormTask</x:String>
+      <x:String>UiPath.Persistence.Activities.BaseTask</x:String>
+      <x:String>UiPath.Persistence.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Persistence.Activities</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Collections.Specialized</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Form.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1142,10005" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Default="[New DataTable]" Name="dt_SMSData" />
+      <Variable x:TypeArguments="x:Int32" Default="[0]" Name="rowCount" />
+      <Variable x:TypeArguments="x:String" Name="strName" />
+      <Variable x:TypeArguments="x:String" Name="strIDNumber" />
+      <Variable x:TypeArguments="x:String" Name="strCategory" />
+      <Variable x:TypeArguments="x:String" Name="strTaskTitle" />
+      <Variable x:TypeArguments="x:String" Name="strNewIDNumber" />
+      <Variable x:TypeArguments="x:String" Name="strNewIDNumberFromForm" />
+      <Variable x:TypeArguments="x:String" Default="SMS_Sheet" Name="strSheetName" />
+      <Variable x:TypeArguments="s:String[]" Name="arr_Files" />
+      <Variable x:TypeArguments="x:String" Name="str_SMSContent" />
+      <Variable x:TypeArguments="upaf:FormTaskData" Name="obj_TaskObject" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="PHASE 0: Setup Folder and Demo SMS" sap:VirtualizedContainerService.HintSize="560,855" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:CreateDirectory Output="{x:Null}" ContinueOnError="True" DisplayName="Create SMS_Inbound Folder" sap:VirtualizedContainerService.HintSize="416,123" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[System.IO.Path.Combine(&quot;C:\&quot;, &quot;SMS_Link_AI_Global_Orchestration&quot;, &quot;SMS_Inbound&quot;)]" />
+      <ui:CreateDirectory Output="{x:Null}" ContinueOnError="True" DisplayName="Create SMS_Processed Folder" sap:VirtualizedContainerService.HintSize="416,123" sap2010:WorkflowViewState.IdRef="CreateDirectory_2" Path="[System.IO.Path.Combine(&quot;C:\&quot;, &quot;SMS_Link_AI_Global_Orchestration&quot;, &quot;SMS_Processed&quot;)]" />
+      <If Condition="[Not System.IO.File.Exists(System.IO.Path.Combine(&quot;C:\&quot;, &quot;SMS_Link_AI_Global_Orchestration&quot;, &quot;SMS_Inbound&quot;, &quot;sms_inbound.txt&quot;)) AndAlso Not System.IO.File.Exists(System.IO.Path.Combine(&quot;C:\&quot;, &quot;SMS_Link_AI_Global_Orchestration&quot;, &quot;SMS_Processed&quot;, &quot;sms_inbound.txt&quot;))]" DisplayName="If Demo SMS Not Yet Created - Guard Duplicate Inbound" sap:VirtualizedContainerService.HintSize="416,320" sap2010:WorkflowViewState.IdRef="If_DemoSMSGuard">
+        <If.Then>
+          <ui:WriteTextFile File="{x:Null}" Output="{x:Null}" DisplayName="Create Demo SMS File (First Run Only)" FileName="[System.IO.Path.Combine(&quot;C:\&quot;, &quot;SMS_Link_AI_Global_Orchestration&quot;, &quot;SMS_Inbound&quot;, &quot;sms_inbound.txt&quot;)]" sap:VirtualizedContainerService.HintSize="416,176" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="REG#Mamat Alkatiri#12345#Social" />
+        </If.Then>
+        <If.Else>
+          <ui:LogMessage DisplayName="Log Demo SMS Already Exists - Skip" sap:VirtualizedContainerService.HintSize="416,143" sap2010:WorkflowViewState.IdRef="LogMessage_DemoSMSSkip" Level="Info" Message="[&quot;Demo SMS already processed or exists - skipping creation to prevent duplicate row.&quot;]" />
+        </If.Else>
+      </If>
+      <Assign DisplayName="Build SMS DataTable" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="Assign_1">
+        <Assign.To>
+          <OutArgument x:TypeArguments="sd:DataTable">[dt_SMSData]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="sd:DataTable">[New DataTable]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <ui:LogMessage DisplayName="Log Setup Complete" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;SETUP COMPLETE: Folders and demo SMS file created.&quot;]" />
+    </Sequence>
+    <Sequence DisplayName="PHASE 0B: SMS Inbound Simulator" sap:VirtualizedContainerService.HintSize="560,2413" sap2010:WorkflowViewState.IdRef="Sequence_4">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Assign DisplayName="Get Files List" sap:VirtualizedContainerService.HintSize="488,175" sap2010:WorkflowViewState.IdRef="Assign_2">
+        <Assign.To>
+          <OutArgument x:TypeArguments="s:String[]">[arr_Files]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="s:String[]">[Directory.GetFiles(System.IO.Path.Combine("C:\", "SMS_Link_AI_Global_Orchestration", "SMS_Inbound"), "*.txt")]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <If Condition="[arr_Files.Length &gt; 0]" DisplayName="If Files Found" sap:VirtualizedContainerService.HintSize="488,2146" sap2010:WorkflowViewState.IdRef="If_1">
+        <If.Then>
+          <Sequence DisplayName="Process SMS Files" sap:VirtualizedContainerService.HintSize="486,1851" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign DisplayName="Read SMS Content" sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="Assign_3">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[str_SMSContent]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[System.IO.File.ReadAllText(arr_Files(0))]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:LogMessage DisplayName="Log SMS Content" sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;SMS INBOUND: &quot; &amp; str_SMSContent]" />
+            <If Condition="[str_SMSContent.StartsWith(&quot;REG#&quot;) AndAlso str_SMSContent.Split(&quot;#&quot;c).Length &gt;= 4]" DisplayName="If Valid SMS Format" sap:VirtualizedContainerService.HintSize="452,1257" sap2010:WorkflowViewState.IdRef="If_ValidSMSFormat">
+              <If.Then>
+                <Sequence DisplayName="Parse and Append SMS to Excel" sap:VirtualizedContainerService.HintSize="450,953" sap2010:WorkflowViewState.IdRef="Sequence_ParseSMS">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt_SMSData]" DisplayName="Read Excel Before Append" sap:VirtualizedContainerService.HintSize="416,227" sap2010:WorkflowViewState.IdRef="ReadRange_PreAppend" SheetName="[strSheetName]" WorkbookPath="[System.IO.Path.Combine(&quot;C:\&quot;, &quot;SMS_Link_AI_Global_Orchestration&quot;, &quot;SMS_Gateway.xlsx&quot;)]" />
+                  <If Condition="[Not dt_SMSData.AsEnumerable().Any(Function(r) r(1).ToString().Trim() = str_SMSContent.Trim())]" DisplayName="If SMS Not Duplicate - Guard Before Append" sap:VirtualizedContainerService.HintSize="416,580" sap2010:WorkflowViewState.IdRef="If_DuplicateSMSGuard">
+                    <If.Then>
+                      <Sequence DisplayName="Append Unique SMS to Excel" sap:VirtualizedContainerService.HintSize="414,350" sap2010:WorkflowViewState.IdRef="Sequence_AppendUnique">
+                        <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[New Object() {Path.GetFileNameWithoutExtension(arr_Files(0)), str_SMSContent, DateTime.Now.ToString(&quot;dd/MM/yyyy&quot;), &quot;Pending&quot;}]" DataTable="[dt_SMSData]" DisplayName="Append New Row to DataTable" sap:VirtualizedContainerService.HintSize="412,221" sap2010:WorkflowViewState.IdRef="AddDataRow_AppendSMS" />
+                        <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[dt_SMSData]" DisplayName="Write Updated Excel (Preserve Manual Rows)" sap:VirtualizedContainerService.HintSize="412,279" sap2010:WorkflowViewState.IdRef="WriteRange_AppendSMS" SheetName="[strSheetName]" WorkbookPath="[System.IO.Path.Combine(&quot;C:\&quot;, &quot;SMS_Link_AI_Global_Orchestration&quot;, &quot;SMS_Gateway.xlsx&quot;)]" />
+                        <ui:LogMessage DisplayName="Log SMS Appended to Excel" sap:VirtualizedContainerService.HintSize="412,143" sap2010:WorkflowViewState.IdRef="LogMessage_AppendSMS" Level="Info" Message="[&quot;NEW SMS appended to Excel: &quot; &amp; str_SMSContent]" />
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <ui:LogMessage DisplayName="Log Duplicate SMS Skipped" sap:VirtualizedContainerService.HintSize="414,143" sap2010:WorkflowViewState.IdRef="LogMessage_DuplicateSMS" Level="Warn" Message="[&quot;DUPLICATE SMS detected - skipping append: &quot; &amp; str_SMSContent]" />
+                    </If.Else>
+                  </If>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <ui:LogMessage DisplayName="Log Invalid SMS Format - Skip" sap:VirtualizedContainerService.HintSize="450,143" sap2010:WorkflowViewState.IdRef="LogMessage_InvalidSMS" Level="Warn" Message="[&quot;Invalid SMS format, skipping append: &quot; &amp; str_SMSContent]" />
+              </If.Else>
+            </If>
+            <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[System.IO.Path.Combine(&quot;C:\&quot;, &quot;SMS_Link_AI_Global_Orchestration&quot;, &quot;SMS_Processed&quot;, Path.GetFileName(arr_Files(0)))]" DisplayName="Move SMS to Processed" sap:VirtualizedContainerService.HintSize="452,184" sap2010:WorkflowViewState.IdRef="MoveFile_1" Overwrite="True" Path="[arr_Files(0)]" />
+          </Sequence>
+        </If.Then>
+        <If.Else>
+          <ui:LogMessage DisplayName="Log No SMS Files" sap:VirtualizedContainerService.HintSize="486,143" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;No SMS files in inbound folder.&quot;]" />
+        </If.Else>
+      </If>
+    </Sequence>
+    <Sequence DisplayName="PHASE 1: Read Excel Data" sap:VirtualizedContainerService.HintSize="560,600" sap2010:WorkflowViewState.IdRef="Sequence_5">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <TryCatch DisplayName="TryCatch - Read Excel File Safely" sap:VirtualizedContainerService.HintSize="416,420" sap2010:WorkflowViewState.IdRef="TryCatch_ReadExcel">
+        <TryCatch.Try>
+          <Sequence DisplayName="Try - Read Excel" sap:VirtualizedContainerService.HintSize="414,250" sap2010:WorkflowViewState.IdRef="Sequence_TryReadExcel">
+            <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt_SMSData]" DisplayName="Read Excel File" sap:VirtualizedContainerService.HintSize="412,227" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="[strSheetName]" WorkbookPath="[System.IO.Path.Combine(&quot;C:\&quot;, &quot;SMS_Link_AI_Global_Orchestration&quot;, &quot;SMS_Gateway.xlsx&quot;)]" />
+            <ui:LogMessage DisplayName="Log Row Count" sap:VirtualizedContainerService.HintSize="412,143" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;[PHASE 1] Excel loaded successfully: &quot; &amp; dt_SMSData.Rows.Count.ToString() &amp; &quot; rows found.&quot;]" />
+          </Sequence>
+        </TryCatch.Try>
+        <TryCatch.Catches>
+          <Catch x:TypeArguments="s:Exception">
+            <ActivityAction x:TypeArguments="s:Exception">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="s:Exception" Name="ex_ReadExcel" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Catch - Handle Excel Read Error" sap:VirtualizedContainerService.HintSize="412,250" sap2010:WorkflowViewState.IdRef="Sequence_CatchReadExcel">
+                <ui:LogMessage DisplayName="Log Excel Read Error" sap:VirtualizedContainerService.HintSize="410,143" sap2010:WorkflowViewState.IdRef="LogMessage_ExcelReadError" Level="Error" Message="[&quot;[ERROR] Failed to read Excel file. Reason: &quot; &amp; ex_ReadExcel.Message &amp; &quot; | Please ensure SMS_Gateway.xlsx exists and is not open by another process.&quot;]" />
+                <Assign DisplayName="Initialize Empty DataTable on Error" sap:VirtualizedContainerService.HintSize="410,143" sap2010:WorkflowViewState.IdRef="Assign_EmptyDT">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="sd:DataTable">[dt_SMSData]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="sd:DataTable">[New DataTable()]</InArgument>
+                  </Assign.Value>
+                </Assign>
+              </Sequence>
+            </ActivityAction>
+          </Catch>
+        </TryCatch.Catches>
+      </TryCatch>
+    </Sequence>
+    <ui:ForEach x:TypeArguments="x:Int32" CurrentIndex="{x:Null}" DisplayName="For Each Row - REAL-TIME Processing" sap:VirtualizedContainerService.HintSize="560,5609" sap2010:WorkflowViewState.IdRef="ForEach_RowIndexPersistence" Values="[Enumerable.Range(0, dt_SMSData.Rows.Count).ToList()]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="x:Int32">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Int32" Name="rowIndex" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body - Process Row" sap:VirtualizedContainerService.HintSize="558,5478" sap2010:WorkflowViewState.IdRef="Sequence_LoopBody">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign DisplayName="Increment Counter" sap:VirtualizedContainerService.HintSize="524,175" sap2010:WorkflowViewState.IdRef="Assign_4">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">[rowCount]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">[rowCount + 1]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <If Condition="[String.IsNullOrWhiteSpace(dt_SMSData.Rows(rowIndex)(1).ToString())]" DisplayName="If Row Empty - Skip" sap:VirtualizedContainerService.HintSize="524,5243" sap2010:WorkflowViewState.IdRef="If_4">
+              <If.Then>
+                <ui:LogMessage DisplayName="Log Empty Row Skipped" sap:VirtualizedContainerService.HintSize="522,143" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Skipping empty row #&quot; &amp; rowCount.ToString()]" />
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Process Non-Empty Row" sap:VirtualizedContainerService.HintSize="522,4948" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <If Condition="[dt_SMSData.Rows(rowIndex)(3).ToString().Trim().ToLower() = &quot;awaiting human action&quot; OrElse dt_SMSData.Rows(rowIndex)(3).ToString().Trim().ToLower().StartsWith(&quot;success&quot;) OrElse dt_SMSData.Rows(rowIndex)(3).ToString().Trim().ToLower().StartsWith(&quot;skipped&quot;)]" DisplayName="If Already Processed - Skip (Anti-Duplicate Guard)" sap:VirtualizedContainerService.HintSize="520,320" sap2010:WorkflowViewState.IdRef="If_AlreadyProcessed">
+                    <If.Then>
+                      <ui:LogMessage DisplayName="Log Row Already Processed - Skip" sap:VirtualizedContainerService.HintSize="518,143" sap2010:WorkflowViewState.IdRef="LogMessage_AlreadyProcessed" Level="Info" Message="[&quot;SKIP (Anti-Duplicate): Row #&quot; &amp; rowCount.ToString() &amp; &quot; already has status: &quot; &amp; dt_SMSData.Rows(rowIndex)(3).ToString() &amp; &quot; - Will not reprocess.&quot;]" />
+                    </If.Then>
+                    <If.Else>
+                      <Sequence DisplayName="Process New/Pending Row Only" sap:VirtualizedContainerService.HintSize="516,4700" sap2010:WorkflowViewState.IdRef="Sequence_NewPendingOnly">
+                  <Assign DisplayName="Extract Name" sap:VirtualizedContainerService.HintSize="488,175" sap2010:WorkflowViewState.IdRef="Assign_5">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[strName]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[dt_SMSData.Rows(rowIndex)(1).ToString().Split("#"c)(1)]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <Assign DisplayName="Extract ID Number" sap:VirtualizedContainerService.HintSize="488,175" sap2010:WorkflowViewState.IdRef="Assign_6">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[strIDNumber]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[dt_SMSData.Rows(rowIndex)(1).ToString().Split("#"c)(2)]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <Assign DisplayName="Extract Category" sap:VirtualizedContainerService.HintSize="488,175" sap2010:WorkflowViewState.IdRef="Assign_7">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[strCategory]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[dt_SMSData.Rows(rowIndex)(1).ToString().Split("#"c)(3)]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <If Condition="[strIDNumber.Trim.Length &lt;&gt; 16]" DisplayName="Validate ID Number Length" sap:VirtualizedContainerService.HintSize="488,3672" sap2010:WorkflowViewState.IdRef="If_3">
+                    <If.Then>
+                      <Sequence DisplayName="ID Number Invalid - Create Task and Wait (REAL-TIME)" sap:VirtualizedContainerService.HintSize="486,3132" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log ID Number Error" sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Warn" Message="[&quot;ERROR: ID Number &quot; &amp; strName &amp; &quot; is invalid (&quot; &amp; strIDNumber &amp; &quot;).&quot;]" />
+                        <Assign DisplayName="Set Task Title" sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="Assign_8">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[strTaskTitle]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">["ID Number Verification Failed - " &amp; strName]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign DisplayName="Set Status - Awaiting Human" sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="Assign_9">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Object">[dt_SMSData.Rows(rowIndex)(3)]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Object">["Awaiting Human Action"]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <TryCatch DisplayName="TryCatch - Create and Wait Form Task Safely" sap:VirtualizedContainerService.HintSize="452,700" sap2010:WorkflowViewState.IdRef="TryCatch_FormTask">
+                          <TryCatch.Try>
+                            <Sequence DisplayName="Try - Create Task and Wait" sap:VirtualizedContainerService.HintSize="450,500" sap2010:WorkflowViewState.IdRef="Sequence_TryFormTask">
+                              <upaf:CreateFormTask AutoCompleteOutcome="{x:Null}" BucketFolderPath="{x:Null}" BucketName="{x:Null}" BulkFormLayout="{x:Null}" ExternalTag="{x:Null}" FormLayout="{x:Null}" Group="{x:Null}" Labels="{x:Null}" ReassignUser="{x:Null}" TaskCatalog="{x:Null}" TimeoutMs="{x:Null}" TimerDuration="{x:Null}" UserNameOrEmail="{x:Null}" BulkFormLayoutGuid="32bee10d-3cc2-4681-afb3-15eafc2e9ffe" DisplayName="Create Form Task - ID Number Verification" DynamicFormPath="FormIDNUMBERVerification.form.json" EnableBulkEdit="False" EnableDynamicForms="True" EnableV2="True" EndCriteria="TaskAssigned" FormLayoutGuid="dbfb15d0-3614-4c79-ae67-c0b0029f4969" GenerateInputFields="True" sap:VirtualizedContainerService.HintSize="448,390" sap2010:WorkflowViewState.IdRef="CreateFormTask_1" Outcome="Notify" StartCriteria="TaskCreated" TaskOutput="[obj_TaskObject]" TaskPriority="[UiPath.Persistence.Activities.Model.Task.TaskPriority.High]" TaskTimerEnabled="False" TaskTitle="[&quot;ID Number Verification Failed - &quot; + strName]">
+                                <upaf:CreateFormTask.AssignmentCriteria>
+                                  <upat:Criteria Description="SingleUserDescription" Id="SingleUser" Name="Activity_AssignTasks_AssignmentCriteria_SingleUserName" />
+                                </upaf:CreateFormTask.AssignmentCriteria>
+                                <upaf:CreateFormTask.FormData>
+                                  <InArgument x:TypeArguments="x:String" x:Key="in_Name">[strName]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="in_OldIDNumber">[strIDNumber]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="in_Category">[strCategory]</InArgument>
+                                  <OutArgument x:TypeArguments="x:String" x:Key="out_NewIDNumber">[strNewIDNumber]</OutArgument>
+                                </upaf:CreateFormTask.FormData>
+                              </upaf:CreateFormTask>
+                              <ui:LogMessage DisplayName="Log Task Created - Waiting" sap:VirtualizedContainerService.HintSize="448,143" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;[ACTION CENTER] Task created for &quot; &amp; strName &amp; &quot; - Awaiting human response...&quot;]" />
+                              <upaf:WaitForFormTaskAndResume StatusMessage="{x:Null}" TaskAction="{x:Null}" TimeoutMs="{x:Null}" WaitItemDataObject="{x:Null}" DisplayName="Wait For Form Task and Resume (REAL-TIME)" sap:VirtualizedContainerService.HintSize="448,175" sap2010:WorkflowViewState.IdRef="WaitForFormTaskAndResume_1" TaskInput="[obj_TaskObject]" TaskOutput="[obj_TaskObject]" />
+                              <ui:LogMessage DisplayName="Log Form Response Received" sap:VirtualizedContainerService.HintSize="448,143" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;[ACTION CENTER] Human response received for &quot; &amp; strName &amp; &quot; - Resuming processing...&quot;]" />
+                            </Sequence>
+                          </TryCatch.Try>
+                          <TryCatch.Catches>
+                            <Catch x:TypeArguments="s:Exception">
+                              <ActivityAction x:TypeArguments="s:Exception">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="s:Exception" Name="ex_FormTask" />
+                                </ActivityAction.Argument>
+                                <Sequence DisplayName="Catch - Handle Form Task Error" sap:VirtualizedContainerService.HintSize="448,250" sap2010:WorkflowViewState.IdRef="Sequence_CatchFormTask">
+                                  <ui:LogMessage DisplayName="Log Form Task Error" sap:VirtualizedContainerService.HintSize="446,143" sap2010:WorkflowViewState.IdRef="LogMessage_FormTaskError" Level="Error" Message="[&quot;[ERROR] Action Center task failed for &quot; &amp; strName &amp; &quot;. Reason: &quot; &amp; ex_FormTask.Message &amp; &quot; | Row marked as Error for retry.&quot;]" />
+                                  <Assign DisplayName="Set Status to Error - Action Center Failed" sap:VirtualizedContainerService.HintSize="446,143" sap2010:WorkflowViewState.IdRef="Assign_ErrorStatus">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:Object">[dt_SMSData.Rows(rowIndex)(3)]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:Object">["Error - Action Center Unavailable: " &amp; ex_FormTask.Message]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                </Sequence>
+                              </ActivityAction>
+                            </Catch>
+                          </TryCatch.Catches>
+                        </TryCatch>
+                        <Assign DisplayName="Get New ID Number from Form (Null-Safe)" sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="Assign_10">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[strNewIDNumberFromForm]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[If(obj_TaskObject IsNot Nothing AndAlso obj_TaskObject.Data IsNot Nothing AndAlso Newtonsoft.Json.Linq.JObject.FromObject(obj_TaskObject.Data)("out_NewIDNumber") IsNot Nothing, Newtonsoft.Json.Linq.JObject.FromObject(obj_TaskObject.Data)("out_NewIDNumber").ToString(), "")]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <ui:LogMessage DisplayName="Log New ID Number Received" sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;New ID Number received: &quot; &amp; strNewIDNumberFromForm]" />
+                        <If Condition="[Not String.IsNullOrEmpty(strNewIDNumberFromForm) AndAlso strNewIDNumberFromForm.Trim.Length = 16]" DisplayName="Validate ID Number 16 Digit (REAL-TIME)" sap:VirtualizedContainerService.HintSize="452,1282" sap2010:WorkflowViewState.IdRef="If_2">
+                          <If.Then>
+                            <Sequence DisplayName="Update DataRow - Valid ID Number (REAL-TIME)" sap:VirtualizedContainerService.HintSize="450,751" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:LogMessage DisplayName="Log Valid ID Number - Updating" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;ID Number valid (16 digits) - Updating row immediately for &quot; &amp; strName]" />
+                              <Assign DisplayName="Update ID Number in SMS_Content" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="Assign_11">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:Object">[dt_SMSData.Rows(rowIndex)(1)]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:Object">["REG#" + strName + "#" + strNewIDNumberFromForm + "#" + strCategory]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <Assign DisplayName="Update Status to Success" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="Assign_12">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:Object">[dt_SMSData.Rows(rowIndex)(3)]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:Object">["Success - ID Number Updated via Action Center"]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <ui:LogMessage DisplayName="Log Update Complete" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Info" Message="[&quot;SUCCESS: &quot; &amp; strName &amp; &quot; - ID Number updated to &quot; &amp; strNewIDNumberFromForm]" />
+                            </Sequence>
+                          </If.Then>
+                          <If.Else>
+                            <Sequence DisplayName="Handle Invalid/Empty ID Number (REAL-TIME)" sap:VirtualizedContainerService.HintSize="450,401" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:LogMessage DisplayName="Log Invalid ID Number - Skip" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Warn" Message="[&quot;User skipped or invalid ID Number provided for &quot; &amp; strName &amp; &quot; - Length: &quot; &amp; If(String.IsNullOrEmpty(strNewIDNumberFromForm), &quot;Empty&quot;, strNewIDNumberFromForm.Length.ToString())]" />
+                              <Assign DisplayName="Update Status to Skipped" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="Assign_13">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:Object">[dt_SMSData.Rows(rowIndex)(3)]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:Object">["Skipped - Invalid or Empty ID Number"]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                            </Sequence>
+                          </If.Else>
+                        </If>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence DisplayName="ID Number Valid - Skip Processing" sap:VirtualizedContainerService.HintSize="486,401" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign DisplayName="Set Status - Success" sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="Assign_14">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Object">[dt_SMSData.Rows(rowIndex)(3)]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Object">["Success"]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <ui:LogMessage DisplayName="Log ID Number Valid" sap:VirtualizedContainerService.HintSize="452,166" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="Info" Message="[&quot;VALID: &quot; &amp; strName]" />
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                  <Assign DisplayName="Reset Variables (Prevent Ghost Row Duplication)" sap:VirtualizedContainerService.HintSize="488,175" sap2010:WorkflowViewState.IdRef="Assign_15">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[strName]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[""]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <Assign DisplayName="Reset strIDNumber" sap:VirtualizedContainerService.HintSize="488,175" sap2010:WorkflowViewState.IdRef="Assign_16">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[strIDNumber]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[""]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <Assign DisplayName="Reset strCategory" sap:VirtualizedContainerService.HintSize="488,175" sap2010:WorkflowViewState.IdRef="Assign_17">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[strCategory]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[""]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <Assign DisplayName="Reset strNewIDNumberFromForm" sap:VirtualizedContainerService.HintSize="488,166" sap2010:WorkflowViewState.IdRef="Assign_18">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[strNewIDNumberFromForm]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[""]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                </Sequence>
+              </If.Else>
+            </If>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+    </ui:ForEach>
+    <TryCatch DisplayName="TryCatch - Save Final Excel Safely" sap:VirtualizedContainerService.HintSize="560,500" sap2010:WorkflowViewState.IdRef="TryCatch_WriteExcel">
+      <TryCatch.Try>
+        <Sequence DisplayName="Try - Write Excel" sap:VirtualizedContainerService.HintSize="558,300" sap2010:WorkflowViewState.IdRef="Sequence_TryWriteExcel">
+          <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[dt_SMSData]" DisplayName="Save to Excel (With Headers - Preserve Structure)" sap:VirtualizedContainerService.HintSize="556,279" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="[strSheetName]" WorkbookPath="[System.IO.Path.Combine(&quot;C:\&quot;, &quot;SMS_Link_AI_Global_Orchestration&quot;, &quot;SMS_Gateway.xlsx&quot;)]" />
+          <ui:LogMessage DisplayName="Log Excel Saved" sap:VirtualizedContainerService.HintSize="556,143" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="Info" Message="[&quot;[SAVE] Excel saved successfully. All statuses updated.&quot;]" />
+        </Sequence>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception">
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="ex_WriteExcel" />
+            </ActivityAction.Argument>
+            <ui:LogMessage DisplayName="Log Excel Save Error" sap:VirtualizedContainerService.HintSize="556,143" sap2010:WorkflowViewState.IdRef="LogMessage_WriteError" Level="Error" Message="[&quot;[ERROR] Failed to save Excel. Reason: &quot; &amp; ex_WriteExcel.Message &amp; &quot; | Please close SMS_Gateway.xlsx if it is currently open, then re-run the robot.&quot;]" />
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
+    <ui:LogMessage DisplayName="Log Completion" sap:VirtualizedContainerService.HintSize="560,166" sap2010:WorkflowViewState.IdRef="LogMessage_15" Level="Info" Message="[&quot;===== ROBOT COMPLETED ===== Total rows processed: &quot; &amp; dt_SMSData.Rows.Count.ToString() &amp; &quot; | Timestamp: &quot; &amp; DateTime.Now.ToString(&quot;dd/MM/yyyy HH:mm:ss&quot;)]" />
+  </Sequence>
+</Activity>
