@@ -1,4 +1,4 @@
-# SMS-Link AI: Humanitarian Registration via Intelligent SMS Automation
+# SMS-Link AI Global: Humanitarian Registration via Intelligent SMS Automation
 
 ## Project Overview
 SMS-Link AI is an automated registration platform designed to accelerate humanitarian aid distribution. The solution captures incoming text message registration data, validates payload structures, and utilizes an intelligent Human-in-the-Loop architecture to dynamically handle data discrepancies without process interruption.
