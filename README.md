@@ -21,7 +21,7 @@ The workflow operates through the following stages:
 
 ## Business Impact
 
-| Metric | Before SMS-Link AI | After SMS-Link AI |
+| Metric | Before SMS-Link AI Global | After SMS-Link AI Global |
 | :--- | :--- | :--- |
 | **Registration Channel** | Internet-only portal | SMS (compatible with any mobile device) |
 | **Data Validation** | Manual and error-prone | Automated and instant integrity validation |
