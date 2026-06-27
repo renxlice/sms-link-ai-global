@@ -77,7 +77,7 @@ This solution utilizes a **hybrid architecture** combining coding agents and hum
 │       ▼                                                     │
 │  ┌─────────────┐    Valid ID        ┌──────────────────┐    │
 │  │   Parser &  │ ─────────────────► │  Auto-Commit to  │    │
-│  │  Validator  │                    │  SMS_Gateway.xlsx │   │
+│  │  Validator  │                    │  SMS_Gateway.xlsx│    │
 │  └─────────────┘                    └──────────────────┘    │
 │       │                                                     │
 │       │  Invalid ID                                         │
