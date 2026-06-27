@@ -75,20 +75,20 @@ This solution utilizes a **hybrid architecture** combining coding agents and hum
 │  Inbound SMS                                                │
 │       │                                                     │
 │       ▼                                                     │
-│  ┌─────────────┐    Valid ID        ┌──────────────────┐   │
-│  │   Parser &  │ ─────────────────► │  Auto-Commit to  │   │
+│  ┌─────────────┐    Valid ID        ┌──────────────────┐    │
+│  │   Parser &  │ ─────────────────► │  Auto-Commit to  │    │
 │  │  Validator  │                    │  SMS_Gateway.xlsx │   │
-│  └─────────────┘                    └──────────────────┘   │
+│  └─────────────┘                    └──────────────────┘    │
 │       │                                                     │
 │       │  Invalid ID                                         │
 │       ▼                                                     │
-│  ┌─────────────┐    Suspend         ┌──────────────────┐   │
-│  │  Exception  │ ─────────────────► │  UiPath Action   │   │
-│  │  Handler    │                    │  Center Task     │   │
-│  └─────────────┘                    └────────┬─────────┘   │
-│       ▲                                      │             │
-│       │           Human resolves             │             │
-│       └──────────────────────────────────────┘             │
+│  ┌─────────────┐    Suspend         ┌──────────────────┐    │
+│  │  Exception  │ ─────────────────► │  UiPath Action   │    │
+│  │  Handler    │                    │  Center Task     │    │
+│  └─────────────┘                    └────────┬─────────┘    │
+│       ▲                                      │              │
+│       │           Human resolves             │              │
+│       └──────────────────────────────────────┘              │
 │                  Resume & Commit                            │
 └─────────────────────────────────────────────────────────────┘
 ```
