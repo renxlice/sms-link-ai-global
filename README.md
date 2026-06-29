@@ -66,7 +66,7 @@ The workflow operates through the following stages:
 
 ## Agent Architecture
 
-This solution utilizes a **hybrid architecture** combining coding agents and human orchestration:
+This solution explicitly utilizes **both Low-code Agents and Coded Agents** within its lifecycle to achieve dynamic case management:
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -93,8 +93,8 @@ This solution utilizes a **hybrid architecture** combining coding agents and hum
 └─────────────────────────────────────────────────────────────┘
 ```
 
-- **Core Workflow** — Parsing layers and database synchronization are executed via coding agents built using UiPath Studio workflow logic.
-- **Exception Handling** — Orchestrated through low-code interactive forms within UiPath Action Center, allowing a seamless blend of automated task execution and human oversight.
+- **Low-code Agents** — Leveraged for core high-level orchestration, long-running asynchronous persistence states (WaitForFormTaskAndResume), and conditional exception handling. It smoothly coordinates human handoffs by rendering dynamic validation interfaces within the UiPath Action Center web portal.
+- **Coded Agents** — Applied through advanced backend logic expressions, multi-point Regular Expression (Regex) patterns to enforce strict structural parsing constraints, and native dataset filtering. Additionally, an external Claude CLI Agent is integrated into the pre-deployment lifecycle to execute automated static code reviews and structural optimization on the main workflow files.
 
 ---
 
@@ -166,6 +166,23 @@ C:\SMS_Link_AI_Global_Orchestration\
 REG#Mamat Alkatiri#12345#Social
 ```
 
+> **Payload Format — Single vs. Multi-line:**
+> The robot reads `sms_inbound.txt` **line by line**. Each line represents one independent registration record. The delimiter between fields within a single record is `#`.
+>
+> **Single registration:**
+> ```
+> REG#Mamat Alkatiri#12345#Social
+> ```
+>
+> **Batch registrations (multiple records in one file):**
+> ```
+> REG#Mamat Alkatiri#12345#Social
+> REG#Siti Rahayu#1234567890123456#Medical
+> REG#John Doe#9876543210987654#Food
+> ```
+>
+> The robot processes each line sequentially. Invalid IDs on any line trigger an individual Action Center task per record — other valid records in the same file are processed immediately without waiting for human resolution.
+
 ---
 
 ### 4. Setup the Master Ledger (Excel Gateway)
@@ -179,6 +196,14 @@ Before running the workflow, you must manually provide the data transaction ledg
 ```
 C:\SMS_Link_AI_Global_Orchestration\SMS_Gateway.xlsx
 ```
+
+> **Required Headers:** Before running the robot, ensure row 1 of `SMS_Sheet` contains the following column headers exactly as written:
+>
+> | A1 | B1 | C1 | D1 |
+> |:---|:---|:---|:---|
+> | `Nama` | `National ID` | `Category` | `Status` |
+>
+> If these headers are absent or misspelled, UiPath's Append Range activity will throw a header mismatch error. The robot does not auto-create headers.
 
 > **Note:** Keep the file closed during robot execution to prevent file-lock exception errors.
 
@@ -204,6 +229,15 @@ You can test and run this long-running workflow using two different methods:
 4. Click **Start a Job** from the Orchestrator Automations dashboard to trigger the process remotely.
 5. When the invalid ID triggers the validation failure, the job status inside Orchestrator will automatically change to `Suspended`, freeing up your machine's runtime license completely.
 6. Once the operator resolves the form task in the Action Center portal, Orchestrator will automatically allocate an available robot machine to pick up the job, resume the execution state, and finalize the ledger without any manual system restarts.
+
+> **Production SMS Ingestion Architecture:**
+> In a live deployment, the `sms_inbound.txt` file is not populated manually. Instead, an upstream integration layer receives inbound SMS messages and writes them to the input folder automatically. Common integration patterns include:
+>
+> - **Twilio Webhook** — A Twilio phone number forwards incoming SMS payloads to a lightweight middleware (e.g., an Azure Function or AWS Lambda), which appends each message as a new line to `sms_inbound.txt` on the production machine.
+> - **Email-to-SMS Gateway** — Carriers such as Telkomsel (Indonesia) and GSMA-compatible providers support email-to-SMS bridging. Inbound SMS are delivered as emails; a UiPath Email Activities workflow monitors the inbox and writes parsed bodies to the input folder.
+> - **Direct API Integration** — For aid organizations with existing CRM or field-collection platforms (e.g., KoboToolbox, ODK), a webhook posts to a REST endpoint that writes to the input folder on a scheduled polling interval.
+>
+> The core UiPath automation is intentionally decoupled from the ingestion channel — any method that reliably writes a `REG#Name#ID#Category` line to `sms_inbound.txt` is compatible with this solution.
 
 ---
 
