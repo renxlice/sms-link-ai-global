@@ -201,7 +201,7 @@ C:\SMS_Link_AI_Global_Orchestration\SMS_Gateway.xlsx
 >
 > | A1 | B1 | C1 | D1 |
 > |:---|:---|:---|:---|
-> | `Nama` | `National ID` | `Category` | `Status` |
+> | `PhoneNumber` | `SMS_Content` | `Date` | `Status` |
 >
 > If these headers are absent or misspelled, UiPath's Append Range activity will throw a header mismatch error. The robot does not auto-create headers.
 
